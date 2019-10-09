@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <v-app-bar fixed app flat class="indigo lighten-1">
+<v-app>
+  <v-content>
+    <v-app-bar fixed app flat   color="indigo lighten-1">
                         <v-toolbar-title>
                             <div id="home">
-                                <a id="home" href="home.vue">
+                                <a id="home" href="/">
                                     <span class="font-weight-bold white--text">Best Shirts:</span>
                                     <span class="font-weight-light white--text">SHIRTS FOR YOU</span>
                                 </a>
                             </div>
                         </v-toolbar-title>
                         <div class="text-center ml-5">
-                            <!--<v-menu offset-y>
+                            <v-menu offset-y>
                                 <template v-slot:activator="{ on }">
                                     <v-btn color="primary" dark v-on="on">
                                         <v-icon left>expand_more</v-icon>
@@ -22,7 +23,7 @@
                                         <v-list-tile-title>{{link.text}}</v-list-tile-title>
                                     </v-list-tile>                                    
                                 </v-list>
-                            </v-menu>-->
+                            </v-menu>
                         </div>
                         <v-spacer></v-spacer>
                         <div>Search Bar Here</div>
@@ -31,21 +32,18 @@
                         <div class="text-center">
                             <v-badge overlap left color="yellow accent-4">
                                 <template v-slot:badge v-if="messages > 0">{{ messages }}</template>
-
                                 <v-btn class="grey lighten-3 ma-1">
                                     <v-icon left>shopping_cart</v-icon>
                                     <span>Your Cart</span>
                                 </v-btn>
-
                             </v-badge>
+                             <v-btn class="yellow accent-4 black--text depressed ma-2">Check Out</v-btn>
                         </div>
-
-
-                        <v-btn class="yellow accent-4 black--text depressed ma-2">Check Out</v-btn>
+ 
                     </v-app-bar>
 
                     <v-row id="carousel">
-                        <v-carousel :show-arrows="false" :cycle="false">
+                        <v-carousel :show-arrows="true" :cycle="true">
                             <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"
                                 reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
                         </v-carousel>
@@ -57,7 +55,7 @@
                                 <div id="productCont">
 
                                     <v-card class="my-5 mx-auto" max-width="300">
-                                        <a id="tt1" href="product1.html">
+                                        <a id="tt1" href="about">
                                             <v-img class="white--text" height="500px"
                                                 src="http://www.hotel-engelhof.eu/img/content/content-3.jpg">
                                                 <v-card-title class="align-end fill-height">Top 10 Australian beaches
@@ -67,7 +65,7 @@
 
                                         <v-card-actions>
                                             <v-btn text color="orange" class="mx-1" @click="messages++">
-                                                Add to card
+                                                Add to cart
                                             </v-btn>
                                             <v-btn text>
                                                 <a id="tt1" href="product1.html">View product</a>
@@ -203,7 +201,7 @@
                         <v-card flat tile class="indigo lighten-1 white--text text-center">
                             <v-card-text>
                                 <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-                                    <v-icon size="24px">{{ icon }}</v-icon>
+                                    <v-icon size="24px">{{ icon }}</v-icon> 
                                 </v-btn>
                             </v-card-text>
 
@@ -224,10 +222,8 @@
                             </v-card-text>
                         </v-card>
                     </v-footer>
-
-
-
-  </div>
+                    </v-content>
+                    </v-app>
 </template>
 
 
@@ -249,25 +245,46 @@ export default {
             src: 'https://www.psdmockups.com/wp-content/uploads/2017/02/Male-Model-T-Shirt-Bundle-PSD-Mockup.jpg',
           },
         ],
-              icons: [
-          'fa fa-facebook',
-          'fa fa-twitter',
-          'fa fa-linkedin',
-          'fa fa-instagram',
-        ],
     }
   }
 }
 </script>
+
 <script>
-        export default {
-            data () {
-                return {
-                    links: [
-                        {text: 'Men', route:'/men'},  
-                        {text: 'Women', route:'/women'},
-                    ]
-                }
-            }
-        }
-    </script>
+  export default {
+    data: () => ({
+      icons: [
+        'fa fa-facebook',
+        'fa fa-twitter',
+        'fa fa-google-plus',
+        'fa fa-linkedin',
+        'fa fa-instagram',
+      ],
+        items: [
+          {
+            src: 'https://dslv9ilpbe7p1.cloudfront.net/Uyj7Yyeq_KuVx1FsHjnMnw_store_header_image',
+          },
+          {
+            src: 'http://www.daystarmarketing.com/media/932f3258-f52f-45ac-a6e4-335ad1302730/YUQ5hg/shirt-stack-2.jpg',
+          },
+          {
+            src: 'https://userdefenders.com/wp-content/uploads/2017/10/User-Defenders-podcast-Logo-Tee-Model-Charcoal.png',
+          },
+          {
+            src: 'https://www.psdmockups.com/wp-content/uploads/2017/02/Male-Model-T-Shirt-Bundle-PSD-Mockup.jpg',
+          },
+        ],
+    }),
+  }
+</script>
+
+<script>
+  export default {
+    data () {
+      return {
+        show: false,
+        messages: 0,
+      }
+    },
+  }
+</script>

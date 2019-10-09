@@ -1,5 +1,140 @@
 <template>
   <div class="about">
-    <h1>About it</h1>
+    <v-app>
+            <v-content>
+                <v-container fluid ma-0 pa-0>
+                    <v-app-bar fixed app flat class="indigo lighten-1">
+                        <v-toolbar-title>
+                            <div id="home">
+                                <a id="home" href="/">
+                                    <span class="font-weight-bold white--text">Best Shirts:</span>
+                                    <span class="font-weight-light white--text">SHIRTS FOR YOU</span>
+                                </a>
+                            </div>
+                        </v-toolbar-title>
+                        <v-spacer></v-spacer>
+                        <div>Search Bar Here</div>
+                        <v-spacer></v-spacer>
+                        <div class="text-center">
+                            <v-badge overlap left color="yellow accent-4">
+                                <template v-slot:badge v-if="messages > 0">{{ messages }}</template>
+
+                                <v-btn class="grey lighten-3 ma-1">
+                                    <v-icon left>shopping_cart</v-icon>
+                                    <span>Your Cart</span>
+                                </v-btn>
+
+                            </v-badge>
+                        </div>
+                        <v-btn class="yellow accent-4 black--text depressed ma-2">Check Out</v-btn>
+                    </v-app-bar>
+
+                    <v-row id="main-p1">
+
+                        <v-card class="my-5" max-width="600">
+
+                            <v-img height="800px" width="600px"
+                                src="http://www.brigidaneves.com/wp-content/uploads/2015/07/600x800-light.jpg">
+
+                                
+                            </v-img>
+
+                        </v-card>
+
+                        <v-card id="card1" class="my-5 indigo lighten-1 white--text" width="400">
+                            <v-card-title>
+                                <span class="display-3">Pris: $$$</span>
+                            </v-card-title>
+                            <v-card-text id="cardText">
+
+                                <li class="mt-5 mb-2">
+                                    <span class="bold display-1 white--text">
+                                        Køn: m/f
+                                    </span>
+                                </li>
+                                <li class="my-2">
+                                    <span class="bold display-1 white--text">
+                                        Størrelse: x
+                                    </span>
+                                </li>
+                                <li class="my-2">
+                                    <span class="bold display-1 white--text">
+                                        Farve: g
+                                    </span>
+                                </li>
+                                <li class="my-2">
+                                    <span class="bold display-1 white--text">
+                                        Type: b
+                                    </span>
+                                </li>
+
+                                <v-card height="300px" width="400px" class="mb-max indigo lighten-1 white--text" flat>
+                                    <span>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis suscipit omnis
+                                        distinctio accusamus assumenda recusandae minus illo molestias incidunt eos?
+                                        Suscipit, praesentium facilis doloremque debitis similique voluptatibus dolore
+                                        magnam illum.
+                                    </span>
+                                </v-card>
+
+                                <div id="buy-btn">
+                                    <v-btn min-width="300px" class="yellow accent-4" @click="messages++">
+                                        <span>
+                                            Add to cart
+                                        </span>
+                                    </v-btn>
+                                </div>
+
+                            </v-card-text>
+
+                        </v-card>
+
+                    </v-row>
+
+                    <v-footer dark padless>
+                        <v-card flat tile class="indigo lighten-1 white--text text-center">
+                            <v-card-text>
+                                <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+                                    <v-icon size="24px">{{ icon }}</v-icon>
+                                </v-btn>
+                            </v-card-text>
+
+                            <v-card-text class="white--text pt-0">
+                                Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus
+                                commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at
+                                orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et
+                                faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices,
+                                cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut
+                                orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                mus.
+                            </v-card-text>
+
+                            <v-divider></v-divider>
+
+                            <v-card-text class="white--text">
+                                {{ new Date().getFullYear() }} — <strong>BEST SHIRTS A/S</strong>
+                            </v-card-text>
+                        </v-card>
+                    </v-footer>
+
+
+                </v-container>
+            </v-content>
+        </v-app>
   </div>
 </template>
+
+
+<script>
+  export default {
+    data: () => ({
+      icons: [
+        'fa fa-facebook',
+        'fa fa-twitter',
+        'fa fa-google-plus',
+        'fa fa-linkedin',
+        'fa fa-instagram',
+      ],
+    }),
+  }
+</script>

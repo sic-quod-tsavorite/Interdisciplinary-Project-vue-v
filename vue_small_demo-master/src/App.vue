@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav" hidden>
+    <div id="nav" >
       <router-link to="/">Home</router-link> |
       <router-link to="/albums">Albums</router-link> |
       <router-link to="/about">About</router-link> |
@@ -17,13 +17,6 @@ export default {
   name: 'App',
   components: {},
   data: () => ({
-  
-        icons: [
-          'fa fa-facebook',
-          'fa fa-twitter',
-          'fa fa-linkedin',
-          'fa fa-instagram',
-        ],
         items1: [
           { title: 'Men' },
           { title: 'Women' },
@@ -45,7 +38,6 @@ export default {
    background-color: #fefefe;
   }
   /*comment*/
-
 
 #carousel {
     padding: 0;
