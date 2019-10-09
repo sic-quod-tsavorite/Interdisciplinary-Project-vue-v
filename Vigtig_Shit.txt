@@ -1,0 +1,8 @@
+
+Date kommer fra dette
+https://tshirtshopdab.azurewebsites.net/api/tshirts
+
+
+Extra shit i måske skal bruge hvis noget går galt, spør lære
+https://github.com/simon2000234/AdminPage
+https://github.com/simon2000234/OnlineTShirtShop

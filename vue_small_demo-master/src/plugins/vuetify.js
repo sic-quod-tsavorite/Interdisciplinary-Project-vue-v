@@ -6,7 +6,7 @@ Vue.use(Vuetify);
 export default new Vuetify({
   icons: {
     iconfont: 'mdi', /*drop after here*/
-    theme: {
+    /*theme: {
       themes: {
         light: {
           primary: '#01579B',
@@ -17,6 +17,6 @@ export default new Vuetify({
           tbc: '#cccccc',
         },
       },
-    },
+    },*/
   }
 });

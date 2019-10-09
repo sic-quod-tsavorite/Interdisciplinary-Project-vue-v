@@ -1,18 +1,16 @@
 <template>
   <div>
-    
-
     <v-app-bar fixed app flat class="indigo lighten-1">
                         <v-toolbar-title>
                             <div id="home">
-                                <a id="home" href="index.html">
+                                <a id="home" href="home.vue">
                                     <span class="font-weight-bold white--text">Best Shirts:</span>
                                     <span class="font-weight-light white--text">SHIRTS FOR YOU</span>
                                 </a>
                             </div>
                         </v-toolbar-title>
                         <div class="text-center ml-5">
-                            <v-menu offset-y>
+                            <!--<v-menu offset-y>
                                 <template v-slot:activator="{ on }">
                                     <v-btn color="primary" dark v-on="on">
                                         <v-icon left>expand_more</v-icon>
@@ -24,7 +22,7 @@
                                         <v-list-tile-title>{{link.text}}</v-list-tile-title>
                                     </v-list-tile>                                    
                                 </v-list>
-                            </v-menu>
+                            </v-menu>-->
                         </div>
                         <v-spacer></v-spacer>
                         <div>Search Bar Here</div>
@@ -256,10 +254,6 @@ export default {
           'fa fa-twitter',
           'fa fa-linkedin',
           'fa fa-instagram',
-        ],
-        items1: [
-          { title: 'Men' },
-          { title: 'Women' },
         ],
     }
   }

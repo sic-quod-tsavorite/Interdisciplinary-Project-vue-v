@@ -36,7 +36,12 @@ export default new Router({
       path: '/shoes',
       name: 'shoes',
       component: ShoesList
-    },
+    },/*
+    {
+      path: '/men',
+      name: 'men',
+      component: MenOverview
+    },*/
     {
       path: '/about',
       name: 'about',
