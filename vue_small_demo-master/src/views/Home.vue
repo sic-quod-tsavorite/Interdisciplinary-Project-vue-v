@@ -15,13 +15,14 @@
                             <v-menu offset-y>
                                 <template v-slot:activator="{ on }">
                                     <v-btn color="primary" dark v-on="on">
+                                        <v-icon left>expand_more</v-icon>
                                         Category
                                     </v-btn>
                                 </template>
                                 <v-list>
-                                    <v-list-item v-for="(item, index) in items1" :key="index" @click="">
-                                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                                    </v-list-item>                                    
+                                    <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
+                                        <v-list-tile-title>{{link.text}}</v-list-tile-title>
+                                    </v-list-tile>                                    
                                 </v-list>
                             </v-menu>
                         </div>
@@ -264,3 +265,15 @@ export default {
   }
 }
 </script>
+<script>
+        export default {
+            data () {
+                return {
+                    links: [
+                        {text: 'Men', route:'/men'},  
+                        {text: 'Women', route:'/women'},
+                    ]
+                }
+            }
+        }
+    </script>
