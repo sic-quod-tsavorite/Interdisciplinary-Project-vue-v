@@ -5,6 +5,7 @@ import AlbumsOverview from "./views/albums/AlbumsOverview";
 import AlbumsCreate from "./views/albums/AlbumsCreate";
 import AlbumsUpdate from "./views/albums/AlbumsUpdate";
 import ShoesList from "./views/shoes/ShoesList";
+import Men from './views/men'
 
 Vue.use(Router)
 
@@ -33,17 +34,17 @@ export default new Router({
       component: AlbumsOverview
     },
     {
+      path: '/men',
+      name: 'Men',
+      component: Men
+    },
+    {
       path: '/shoes',
       name: 'shoes',
       component: ShoesList
-    },/*
+    },
     {
-      path: '/men',
-      name: 'men',
-      component: MenOverview
-    },*/
-    {
-      path: '/about',
+      path: '/about/:id',
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
