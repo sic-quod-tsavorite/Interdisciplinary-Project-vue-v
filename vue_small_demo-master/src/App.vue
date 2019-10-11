@@ -21,12 +21,12 @@
               </template>
               <v-list>
                 <v-row>
-                  <v-btn id="menuB" block href="men">
+                  <v-btn id="menuB" block href="/men">
                     <span>Men</span>
                   </v-btn>
                 </v-row>
                 <v-row>
-                  <v-btn id="menuB" block href="women">
+                  <v-btn id="menuB" block href="/women">
                     <span>Women</span>
                   </v-btn>
                 </v-row>
