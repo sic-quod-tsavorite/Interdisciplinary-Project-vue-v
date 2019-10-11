@@ -5,7 +5,8 @@ import AlbumsOverview from "./views/albums/AlbumsOverview";
 import AlbumsCreate from "./views/albums/AlbumsCreate";
 import AlbumsUpdate from "./views/albums/AlbumsUpdate";
 import ShoesList from "./views/shoes/ShoesList";
-import Men from './views/men'
+import Men from './views/men';
+import Women from './views/women'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/men',
       name: 'Men',
       component: Men
+    },
+    {
+      path: '/women',
+      name: 'Women',
+      component: Women
     },
     {
       path: '/shoes',

@@ -26,7 +26,11 @@
               >
                 <a id="tt1">
                   <v-img class="white--text" height="500px" :src="product.imgLink">
-                    <v-card-title class="align-end fill-height">{{product.color}} {{product.type}}</v-card-title>
+                    <v-card-title class="align-end fill-height">
+                      <div id="prText">
+                      {{product.color}} {{product.type}}
+                      </div>
+                      </v-card-title>
                   </v-img>
                 </a>
               </v-card>

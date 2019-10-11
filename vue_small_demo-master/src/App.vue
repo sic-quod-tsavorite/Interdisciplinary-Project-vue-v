@@ -133,6 +133,12 @@ export default {
   margin: 0 auto 0 auto;
 }
 
+#prText {
+  background-color: #5C6BC0;
+  opacity: 0.7;
+  flex-grow: 1;
+}
+
 #tt1 {
   text-decoration: none;
   color: #ff9800;
